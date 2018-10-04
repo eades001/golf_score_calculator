@@ -30,28 +30,29 @@
         {
             this.titleLabel = new System.Windows.Forms.Label();
             this.golferGroupBox1 = new System.Windows.Forms.GroupBox();
-            this.nameLabel1 = new System.Windows.Forms.Label();
-            this.nameTextBox1 = new System.Windows.Forms.TextBox();
-            this.holeLabel1 = new System.Windows.Forms.Label();
-            this.holeNumberLabel1 = new System.Windows.Forms.Label();
-            this.holeNumberTextBox1 = new System.Windows.Forms.TextBox();
-            this.nextButton1 = new System.Windows.Forms.Button();
-            this.scoresListBox1 = new System.Windows.Forms.ListBox();
-            this.totalScoreLabel1 = new System.Windows.Forms.Label();
             this.totalLabel1 = new System.Windows.Forms.Label();
+            this.totalScoreLabel1 = new System.Windows.Forms.Label();
+            this.scoresListBox1 = new System.Windows.Forms.ListBox();
+            this.nextButton1 = new System.Windows.Forms.Button();
+            this.holeScoreTextBox1 = new System.Windows.Forms.TextBox();
+            this.holeNumberLabel1 = new System.Windows.Forms.Label();
+            this.holeLabel1 = new System.Windows.Forms.Label();
+            this.nameTextBox1 = new System.Windows.Forms.TextBox();
+            this.nameLabel1 = new System.Windows.Forms.Label();
             this.golferGroupBox2 = new System.Windows.Forms.GroupBox();
             this.totalLabel2 = new System.Windows.Forms.Label();
             this.totalScoreLabel2 = new System.Windows.Forms.Label();
             this.scoreListBox2 = new System.Windows.Forms.ListBox();
             this.nextButton2 = new System.Windows.Forms.Button();
-            this.holeNumberTextBox2 = new System.Windows.Forms.TextBox();
+            this.holeScoreTextBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.holeLabel2 = new System.Windows.Forms.Label();
             this.nameTextBox2 = new System.Windows.Forms.TextBox();
             this.nameLabel2 = new System.Windows.Forms.Label();
             this.winnerButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.resultsLabel = new System.Windows.Forms.Label();
+            this.holeNumberLabel2 = new System.Windows.Forms.Label();
             this.golferGroupBox1.SuspendLayout();
             this.golferGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             this.golferGroupBox1.Controls.Add(this.totalScoreLabel1);
             this.golferGroupBox1.Controls.Add(this.scoresListBox1);
             this.golferGroupBox1.Controls.Add(this.nextButton1);
-            this.golferGroupBox1.Controls.Add(this.holeNumberTextBox1);
+            this.golferGroupBox1.Controls.Add(this.holeScoreTextBox1);
             this.golferGroupBox1.Controls.Add(this.holeNumberLabel1);
             this.golferGroupBox1.Controls.Add(this.holeLabel1);
             this.golferGroupBox1.Controls.Add(this.nameTextBox1);
@@ -86,80 +87,15 @@
             this.golferGroupBox1.TabStop = false;
             this.golferGroupBox1.Text = " Golfer 1 ";
             // 
-            // nameLabel1
+            // totalLabel1
             // 
-            this.nameLabel1.AutoSize = true;
-            this.nameLabel1.Location = new System.Drawing.Point(15, 39);
-            this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(62, 21);
-            this.nameLabel1.TabIndex = 0;
-            this.nameLabel1.Text = "Name:";
-            // 
-            // nameTextBox1
-            // 
-            this.nameTextBox1.Location = new System.Drawing.Point(19, 64);
-            this.nameTextBox1.Name = "nameTextBox1";
-            this.nameTextBox1.Size = new System.Drawing.Size(223, 28);
-            this.nameTextBox1.TabIndex = 1;
-            // 
-            // holeLabel1
-            // 
-            this.holeLabel1.AutoSize = true;
-            this.holeLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.holeLabel1.Location = new System.Drawing.Point(14, 114);
-            this.holeLabel1.Name = "holeLabel1";
-            this.holeLabel1.Size = new System.Drawing.Size(57, 25);
-            this.holeLabel1.TabIndex = 2;
-            this.holeLabel1.Text = "Hole";
-            // 
-            // holeNumberLabel1
-            // 
-            this.holeNumberLabel1.AutoSize = true;
-            this.holeNumberLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.holeNumberLabel1.Location = new System.Drawing.Point(68, 115);
-            this.holeNumberLabel1.Name = "holeNumberLabel1";
-            this.holeNumberLabel1.Size = new System.Drawing.Size(36, 25);
-            this.holeNumberLabel1.TabIndex = 3;
-            this.holeNumberLabel1.Text = "#1";
-            // 
-            // holeNumberTextBox1
-            // 
-            this.holeNumberTextBox1.Location = new System.Drawing.Point(110, 114);
-            this.holeNumberTextBox1.Name = "holeNumberTextBox1";
-            this.holeNumberTextBox1.Size = new System.Drawing.Size(42, 28);
-            this.holeNumberTextBox1.TabIndex = 4;
-            // 
-            // nextButton1
-            // 
-            this.nextButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nextButton1.ForeColor = System.Drawing.Color.Black;
-            this.nextButton1.Location = new System.Drawing.Point(170, 114);
-            this.nextButton1.Name = "nextButton1";
-            this.nextButton1.Size = new System.Drawing.Size(72, 28);
-            this.nextButton1.TabIndex = 5;
-            this.nextButton1.Text = "Next";
-            this.nextButton1.UseVisualStyleBackColor = true;
-            // 
-            // scoresListBox1
-            // 
-            this.scoresListBox1.Enabled = false;
-            this.scoresListBox1.Font = new System.Drawing.Font("Arial", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.scoresListBox1.FormattingEnabled = true;
-            this.scoresListBox1.ItemHeight = 22;
-            this.scoresListBox1.Items.AddRange(new object[] {
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine"});
-            this.scoresListBox1.Location = new System.Drawing.Point(19, 172);
-            this.scoresListBox1.Name = "scoresListBox1";
-            this.scoresListBox1.Size = new System.Drawing.Size(223, 202);
-            this.scoresListBox1.TabIndex = 6;
+            this.totalLabel1.AutoSize = true;
+            this.totalLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.totalLabel1.Location = new System.Drawing.Point(206, 404);
+            this.totalLabel1.Name = "totalLabel1";
+            this.totalLabel1.Size = new System.Drawing.Size(36, 25);
+            this.totalLabel1.TabIndex = 8;
+            this.totalLabel1.Text = "35";
             // 
             // totalScoreLabel1
             // 
@@ -171,23 +107,80 @@
             this.totalScoreLabel1.TabIndex = 7;
             this.totalScoreLabel1.Text = "Total Score:";
             // 
-            // totalLabel1
+            // scoresListBox1
             // 
-            this.totalLabel1.AutoSize = true;
-            this.totalLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.totalLabel1.Location = new System.Drawing.Point(206, 404);
-            this.totalLabel1.Name = "totalLabel1";
-            this.totalLabel1.Size = new System.Drawing.Size(36, 25);
-            this.totalLabel1.TabIndex = 8;
-            this.totalLabel1.Text = "35";
+            this.scoresListBox1.Enabled = false;
+            this.scoresListBox1.Font = new System.Drawing.Font("Arial", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.scoresListBox1.FormattingEnabled = true;
+            this.scoresListBox1.ItemHeight = 22;
+            this.scoresListBox1.Location = new System.Drawing.Point(19, 172);
+            this.scoresListBox1.Name = "scoresListBox1";
+            this.scoresListBox1.Size = new System.Drawing.Size(223, 202);
+            this.scoresListBox1.TabIndex = 6;
+            // 
+            // nextButton1
+            // 
+            this.nextButton1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.nextButton1.ForeColor = System.Drawing.Color.Black;
+            this.nextButton1.Location = new System.Drawing.Point(176, 114);
+            this.nextButton1.Name = "nextButton1";
+            this.nextButton1.Size = new System.Drawing.Size(66, 28);
+            this.nextButton1.TabIndex = 5;
+            this.nextButton1.Text = "Next";
+            this.nextButton1.UseVisualStyleBackColor = true;
+            this.nextButton1.Click += new System.EventHandler(this.nextButton1_Click);
+            // 
+            // holeScoreTextBox1
+            // 
+            this.holeScoreTextBox1.Location = new System.Drawing.Point(119, 114);
+            this.holeScoreTextBox1.Name = "holeScoreTextBox1";
+            this.holeScoreTextBox1.Size = new System.Drawing.Size(42, 28);
+            this.holeScoreTextBox1.TabIndex = 4;
+            // 
+            // holeNumberLabel1
+            // 
+            this.holeNumberLabel1.AutoSize = true;
+            this.holeNumberLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.holeNumberLabel1.Location = new System.Drawing.Point(88, 114);
+            this.holeNumberLabel1.Name = "holeNumberLabel1";
+            this.holeNumberLabel1.Size = new System.Drawing.Size(24, 25);
+            this.holeNumberLabel1.TabIndex = 3;
+            this.holeNumberLabel1.Text = "1";
+            // 
+            // holeLabel1
+            // 
+            this.holeLabel1.AutoSize = true;
+            this.holeLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.holeLabel1.Location = new System.Drawing.Point(14, 114);
+            this.holeLabel1.Name = "holeLabel1";
+            this.holeLabel1.Size = new System.Drawing.Size(81, 25);
+            this.holeLabel1.TabIndex = 2;
+            this.holeLabel1.Text = "Hole  #";
+            // 
+            // nameTextBox1
+            // 
+            this.nameTextBox1.Location = new System.Drawing.Point(19, 64);
+            this.nameTextBox1.Name = "nameTextBox1";
+            this.nameTextBox1.Size = new System.Drawing.Size(223, 28);
+            this.nameTextBox1.TabIndex = 1;
+            // 
+            // nameLabel1
+            // 
+            this.nameLabel1.AutoSize = true;
+            this.nameLabel1.Location = new System.Drawing.Point(15, 39);
+            this.nameLabel1.Name = "nameLabel1";
+            this.nameLabel1.Size = new System.Drawing.Size(62, 21);
+            this.nameLabel1.TabIndex = 0;
+            this.nameLabel1.Text = "Name:";
             // 
             // golferGroupBox2
             // 
+            this.golferGroupBox2.Controls.Add(this.holeNumberLabel2);
             this.golferGroupBox2.Controls.Add(this.totalLabel2);
             this.golferGroupBox2.Controls.Add(this.totalScoreLabel2);
             this.golferGroupBox2.Controls.Add(this.scoreListBox2);
             this.golferGroupBox2.Controls.Add(this.nextButton2);
-            this.golferGroupBox2.Controls.Add(this.holeNumberTextBox2);
+            this.golferGroupBox2.Controls.Add(this.holeScoreTextBox2);
             this.golferGroupBox2.Controls.Add(this.label3);
             this.golferGroupBox2.Controls.Add(this.holeLabel2);
             this.golferGroupBox2.Controls.Add(this.nameTextBox2);
@@ -227,16 +220,6 @@
             this.scoreListBox2.Font = new System.Drawing.Font("Arial", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.scoreListBox2.FormattingEnabled = true;
             this.scoreListBox2.ItemHeight = 22;
-            this.scoreListBox2.Items.AddRange(new object[] {
-            "one",
-            "two",
-            "three",
-            "four",
-            "five",
-            "six",
-            "seven",
-            "eight",
-            "nine"});
             this.scoreListBox2.Location = new System.Drawing.Point(19, 172);
             this.scoreListBox2.Name = "scoreListBox2";
             this.scoreListBox2.Size = new System.Drawing.Size(223, 202);
@@ -246,19 +229,19 @@
             // 
             this.nextButton2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.nextButton2.ForeColor = System.Drawing.Color.Black;
-            this.nextButton2.Location = new System.Drawing.Point(170, 114);
+            this.nextButton2.Location = new System.Drawing.Point(176, 114);
             this.nextButton2.Name = "nextButton2";
-            this.nextButton2.Size = new System.Drawing.Size(72, 28);
+            this.nextButton2.Size = new System.Drawing.Size(66, 28);
             this.nextButton2.TabIndex = 5;
             this.nextButton2.Text = "Next";
             this.nextButton2.UseVisualStyleBackColor = true;
             // 
-            // holeNumberTextBox2
+            // holeScoreTextBox2
             // 
-            this.holeNumberTextBox2.Location = new System.Drawing.Point(110, 114);
-            this.holeNumberTextBox2.Name = "holeNumberTextBox2";
-            this.holeNumberTextBox2.Size = new System.Drawing.Size(42, 28);
-            this.holeNumberTextBox2.TabIndex = 4;
+            this.holeScoreTextBox2.Location = new System.Drawing.Point(119, 114);
+            this.holeScoreTextBox2.Name = "holeScoreTextBox2";
+            this.holeScoreTextBox2.Size = new System.Drawing.Size(42, 28);
+            this.holeScoreTextBox2.TabIndex = 4;
             // 
             // label3
             // 
@@ -266,9 +249,8 @@
             this.label3.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label3.Location = new System.Drawing.Point(68, 115);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 25);
+            this.label3.Size = new System.Drawing.Size(0, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "#1";
             // 
             // holeLabel2
             // 
@@ -276,9 +258,9 @@
             this.holeLabel2.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.holeLabel2.Location = new System.Drawing.Point(14, 114);
             this.holeLabel2.Name = "holeLabel2";
-            this.holeLabel2.Size = new System.Drawing.Size(57, 25);
+            this.holeLabel2.Size = new System.Drawing.Size(81, 25);
             this.holeLabel2.TabIndex = 2;
-            this.holeLabel2.Text = "Hole";
+            this.holeLabel2.Text = "Hole  #";
             // 
             // nameTextBox2
             // 
@@ -306,6 +288,7 @@
             this.winnerButton.TabIndex = 3;
             this.winnerButton.Text = "Determine Winner";
             this.winnerButton.UseVisualStyleBackColor = true;
+            this.winnerButton.Click += new System.EventHandler(this.winnerButton_Click);
             // 
             // quitButton
             // 
@@ -318,15 +301,24 @@
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // resultsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Location = new System.Drawing.Point(266, 609);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 25);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Lynn wins!";
+            this.resultsLabel.AutoSize = true;
+            this.resultsLabel.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.resultsLabel.Location = new System.Drawing.Point(266, 609);
+            this.resultsLabel.Name = "resultsLabel";
+            this.resultsLabel.Size = new System.Drawing.Size(0, 25);
+            this.resultsLabel.TabIndex = 5;
+            // 
+            // holeNumberLabel2
+            // 
+            this.holeNumberLabel2.AutoSize = true;
+            this.holeNumberLabel2.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.holeNumberLabel2.Location = new System.Drawing.Point(88, 114);
+            this.holeNumberLabel2.Name = "holeNumberLabel2";
+            this.holeNumberLabel2.Size = new System.Drawing.Size(24, 25);
+            this.holeNumberLabel2.TabIndex = 9;
+            this.holeNumberLabel2.Text = "1";
             // 
             // Form1
             // 
@@ -334,7 +326,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(635, 682);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.resultsLabel);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.winnerButton);
             this.Controls.Add(this.golferGroupBox2);
@@ -362,7 +354,7 @@
         private System.Windows.Forms.Label totalScoreLabel1;
         private System.Windows.Forms.ListBox scoresListBox1;
         private System.Windows.Forms.Button nextButton1;
-        private System.Windows.Forms.TextBox holeNumberTextBox1;
+        private System.Windows.Forms.TextBox holeScoreTextBox1;
         private System.Windows.Forms.Label holeNumberLabel1;
         private System.Windows.Forms.Label holeLabel1;
         private System.Windows.Forms.TextBox nameTextBox1;
@@ -372,14 +364,15 @@
         private System.Windows.Forms.Label totalScoreLabel2;
         private System.Windows.Forms.ListBox scoreListBox2;
         private System.Windows.Forms.Button nextButton2;
-        private System.Windows.Forms.TextBox holeNumberTextBox2;
+        private System.Windows.Forms.TextBox holeScoreTextBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label holeLabel2;
         private System.Windows.Forms.TextBox nameTextBox2;
         private System.Windows.Forms.Label nameLabel2;
         private System.Windows.Forms.Button winnerButton;
         private System.Windows.Forms.Button quitButton;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label resultsLabel;
+        private System.Windows.Forms.Label holeNumberLabel2;
     }
 }
 
