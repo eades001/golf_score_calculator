@@ -41,6 +41,7 @@
             this.nameTextBox1 = new System.Windows.Forms.TextBox();
             this.nameLabel1 = new System.Windows.Forms.Label();
             this.golferGroupBox2 = new System.Windows.Forms.GroupBox();
+            this.errorLabel2 = new System.Windows.Forms.Label();
             this.holeNumberLabel2 = new System.Windows.Forms.Label();
             this.totalLabel2 = new System.Windows.Forms.Label();
             this.totalScoreLabel2 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.winnerButton = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.resultsLabel = new System.Windows.Forms.Label();
-            this.errorLabel2 = new System.Windows.Forms.Label();
             this.golferGroupBox1.SuspendLayout();
             this.golferGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -105,9 +105,8 @@
             this.totalLabel1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.totalLabel1.Location = new System.Drawing.Point(206, 404);
             this.totalLabel1.Name = "totalLabel1";
-            this.totalLabel1.Size = new System.Drawing.Size(24, 25);
+            this.totalLabel1.Size = new System.Drawing.Size(0, 25);
             this.totalLabel1.TabIndex = 8;
-            this.totalLabel1.Text = "0";
             // 
             // totalScoreLabel1
             // 
@@ -121,13 +120,13 @@
             // 
             // scoresListBox1
             // 
-            this.scoresListBox1.Enabled = false;
-            this.scoresListBox1.Font = new System.Drawing.Font("Arial", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.scoresListBox1.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.scoresListBox1.ForeColor = System.Drawing.Color.Black;
             this.scoresListBox1.FormattingEnabled = true;
-            this.scoresListBox1.ItemHeight = 22;
+            this.scoresListBox1.ItemHeight = 23;
             this.scoresListBox1.Location = new System.Drawing.Point(19, 172);
             this.scoresListBox1.Name = "scoresListBox1";
-            this.scoresListBox1.Size = new System.Drawing.Size(223, 202);
+            this.scoresListBox1.Size = new System.Drawing.Size(222, 211);
             this.scoresListBox1.TabIndex = 6;
             // 
             // nextButton1
@@ -206,6 +205,16 @@
             this.golferGroupBox2.TabStop = false;
             this.golferGroupBox2.Text = " Golfer 2 ";
             // 
+            // errorLabel2
+            // 
+            this.errorLabel2.AutoSize = true;
+            this.errorLabel2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.errorLabel2.ForeColor = System.Drawing.Color.Gold;
+            this.errorLabel2.Location = new System.Drawing.Point(35, 145);
+            this.errorLabel2.Name = "errorLabel2";
+            this.errorLabel2.Size = new System.Drawing.Size(0, 16);
+            this.errorLabel2.TabIndex = 10;
+            // 
             // holeNumberLabel2
             // 
             this.holeNumberLabel2.AutoSize = true;
@@ -222,9 +231,8 @@
             this.totalLabel2.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.totalLabel2.Location = new System.Drawing.Point(206, 404);
             this.totalLabel2.Name = "totalLabel2";
-            this.totalLabel2.Size = new System.Drawing.Size(24, 25);
+            this.totalLabel2.Size = new System.Drawing.Size(0, 25);
             this.totalLabel2.TabIndex = 8;
-            this.totalLabel2.Text = "0";
             // 
             // totalScoreLabel2
             // 
@@ -238,13 +246,12 @@
             // 
             // scoresListBox2
             // 
-            this.scoresListBox2.Enabled = false;
-            this.scoresListBox2.Font = new System.Drawing.Font("Arial", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.scoresListBox2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.scoresListBox2.FormattingEnabled = true;
-            this.scoresListBox2.ItemHeight = 22;
+            this.scoresListBox2.ItemHeight = 23;
             this.scoresListBox2.Location = new System.Drawing.Point(19, 172);
             this.scoresListBox2.Name = "scoresListBox2";
-            this.scoresListBox2.Size = new System.Drawing.Size(223, 202);
+            this.scoresListBox2.Size = new System.Drawing.Size(222, 211);
             this.scoresListBox2.TabIndex = 6;
             // 
             // nextButton2
@@ -308,7 +315,7 @@
             // 
             this.quitButton.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.quitButton.ForeColor = System.Drawing.Color.Black;
-            this.quitButton.Location = new System.Drawing.Point(503, 602);
+            this.quitButton.Location = new System.Drawing.Point(524, 602);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(72, 40);
             this.quitButton.TabIndex = 4;
@@ -324,16 +331,6 @@
             this.resultsLabel.Name = "resultsLabel";
             this.resultsLabel.Size = new System.Drawing.Size(0, 25);
             this.resultsLabel.TabIndex = 5;
-            // 
-            // errorLabel2
-            // 
-            this.errorLabel2.AutoSize = true;
-            this.errorLabel2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.errorLabel2.ForeColor = System.Drawing.Color.Gold;
-            this.errorLabel2.Location = new System.Drawing.Point(35, 145);
-            this.errorLabel2.Name = "errorLabel2";
-            this.errorLabel2.Size = new System.Drawing.Size(0, 16);
-            this.errorLabel2.TabIndex = 10;
             // 
             // Form1
             // 

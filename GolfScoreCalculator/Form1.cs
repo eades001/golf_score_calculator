@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Windows.Forms;
 
+/*****************************************/
+/*  Project 3:   Golf Score Calculator   */
+/*  Author:      Lynn Eades              */
+/*  Date:        10/7/2018               */
+/*****************************************/
+
 namespace GolfScoreCalculator
 {
     public partial class Form1 : Form
     {
+        const int TOTAL_HOLES = 9;
+
         private int[] scoresGolfer1, scoresGolfer2;
         private int totalScoreGolfer1, totalScoreGolfer2;
-        const int TOTAL_HOLES = 9;
 
         public Form1()
         {
             InitializeComponent();
 
-            // Initialize golfer scores and total scores
+            // Initialize golfer scores list and total scores
             scoresGolfer1 = new int[TOTAL_HOLES];
             scoresGolfer2 = new int[TOTAL_HOLES];
             totalScoreGolfer1 = 0;
@@ -27,18 +34,23 @@ namespace GolfScoreCalculator
 
         private void nextButton1_Click(object sender, EventArgs e)
         {
+            // Get the current hole number
             int thisHole = Convert.ToInt16(holeNumberLabel1.Text);
 
             // clear out any error message if displayed
             errorLabel1.Text = "";
             
-            // Handle non-integer scores with try-catch
+            // Handle non-integer scores entered with try-catch
             try
             {
-                // Add entered score to array
-                scoresGolfer1[thisHole - 1] = Convert.ToInt16(holeScoreTextBox1.Text); ;
+                // Add entered score to scores array
+                int thisScore = Convert.ToInt16(holeScoreTextBox1.Text);
+                scoresGolfer1[thisHole - 1] = thisScore;
+                
+                // Keep a running total
+                totalScoreGolfer1 += thisScore;
 
-                // Clear last score
+                // Clear last score from text box
                 holeScoreTextBox1.Clear();
 
                 // If more holes to enter, set next hole number label
@@ -57,22 +69,21 @@ namespace GolfScoreCalculator
                     // Display the scores in the listbox and the total score
                     for (int hole = 1; hole <= scoresGolfer1.Length; hole++)
                     {
-                        // Keep a running total
                         int score = scoresGolfer1[hole - 1];
-                        totalScoreGolfer1 += score;
 
                         // Assemble hole score string and add to list box
-                        string listItem = String.Format("Hole #{0} Score {1}", hole.ToString(), score.ToString());
+                        string listItem = String.Format("  Hole #{0}   Score {1}", hole.ToString(), score.ToString());
                         scoresListBox1.Items.Add(listItem);
                     }
 
-                    // Update the total score
+                    // Display the total score
                     totalLabel1.Text = Convert.ToString(totalScoreGolfer1);
                 }
             }
+            // If score entered is not an integer, display an error
             catch
             {
-                // Show an error to user
+                // Show the error
                 string errorString = "Please enter a whole number";
                 errorLabel1.Text = errorString;
 
@@ -84,6 +95,7 @@ namespace GolfScoreCalculator
 
         private void nextButton2_Click(object sender, EventArgs e)
         {
+            // Get the current hole number
             int thisHole = Convert.ToInt16(holeNumberLabel2.Text);
 
             // clear out any error message if displayed
@@ -92,10 +104,14 @@ namespace GolfScoreCalculator
             // Handle non-integer scores with try-catch
             try
             {
-                // Add entered score to array
-                scoresGolfer2[thisHole - 1] = Convert.ToInt16(holeScoreTextBox2.Text); ;
+                // Add entered score to scores array
+                int thisScore = Convert.ToInt16(holeScoreTextBox2.Text);
+                scoresGolfer2[thisHole - 1] = thisScore;
 
-                // Clear last score
+                // Keep a running total
+                totalScoreGolfer2 += thisScore;
+
+                // Clear last score from text box
                 holeScoreTextBox2.Clear();
 
                 // If more holes to enter, set next hole number label
@@ -114,22 +130,21 @@ namespace GolfScoreCalculator
                     // Display the scores in the listbox and the total score
                     for (int hole = 1; hole <= scoresGolfer2.Length; hole++)
                     {
-                        // Keep a running total
                         int score = scoresGolfer2[hole - 1];
-                        totalScoreGolfer2 += score;
 
                         // Assemble hole score string and add to list box
-                        string listItem = String.Format("Hole #{0} Score {1}", hole.ToString(), score.ToString());
+                        string listItem = String.Format("  Hole #{0}   Score {1}", hole.ToString(), score.ToString());
                         scoresListBox2.Items.Add(listItem);
                     }
 
-                    // Update the total score
+                    // Display the total score
                     totalLabel2.Text = Convert.ToString(totalScoreGolfer2);
                 }
             }
+            // If score entered is not an integer, display an error
             catch
             {
-                // Show an error to user
+                // Show the error
                 string errorString = "Please enter a whole number";
                 errorLabel2.Text = errorString;
 
@@ -150,14 +165,16 @@ namespace GolfScoreCalculator
             }
             else if (totalScoreGolfer2 < totalScoreGolfer1)
             {
-                winnerText = String.Format("{0} is the winner!", nameTextBox2.Text.Trim());
+                // Get just the first name if user adds more than 1
+                string firstName = nameTextBox2.Text.Split()[0].Trim();
+                winnerText = String.Format("{0} WINS!", firstName);
             }
             else // must be a tie
             {
                 winnerText = String.Format("It's a tie!");
             }
 
-            // Display winner or if a tie 
+            // Display winner or a tie
 ;           resultsLabel.Text = winnerText;
         }
     }
