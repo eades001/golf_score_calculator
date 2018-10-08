@@ -161,7 +161,8 @@ namespace GolfScoreCalculator
             // Determine the winner - lowest score wins in golf
             if (totalScoreGolfer1 < totalScoreGolfer2)
             {
-                winnerText = String.Format("{0} is the winner!", nameTextBox1.Text.Trim());
+                string firstName = nameTextBox1.Text.Split()[0].Trim();
+                winnerText = String.Format("{0} WINS!", firstName);
             }
             else if (totalScoreGolfer2 < totalScoreGolfer1)
             {
@@ -171,7 +172,7 @@ namespace GolfScoreCalculator
             }
             else // must be a tie
             {
-                winnerText = String.Format("It's a tie!");
+                winnerText = String.Format("It's a TIE!");
             }
 
             // Display winner or a tie
